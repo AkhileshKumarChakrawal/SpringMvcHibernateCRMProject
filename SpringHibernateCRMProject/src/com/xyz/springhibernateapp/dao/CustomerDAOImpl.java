@@ -23,9 +23,9 @@ public class CustomerDAOImpl implements CustomerDAO {
 	public List<Customer> getAllCustomerDetails() {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.getCurrentSession();
-		Query<Customer> theQuery = session.createQuery("from Customer order by firstName");
+		Query<Customer> query = session.createQuery("from Customer order by firstName");
 	
-		List<Customer> customers = theQuery.list();
+		List<Customer> customers = query.list();
 		
 		return customers;
 /*		return (List<Customer>)session.createCriteria(Customer.class).list();

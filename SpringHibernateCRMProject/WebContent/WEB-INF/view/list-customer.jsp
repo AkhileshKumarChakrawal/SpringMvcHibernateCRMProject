@@ -7,26 +7,38 @@
 <meta charset="ISO-8859-1">
 <title>CRM-Application</title>
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-
+<style type="text/css">
+.searchbtn{
+border-radius: 10px;
+}
+#formField{
+margin-top: 40px;
+}
+#tableborder{
+border:1px solid gray;
+}
+</style>
 </head>
 <body>
-<div class="container-fluid">
-<h1 class="text-center">Customer Relationship Management</h1>
-<form action="search" method="get">
-<div class="row">
-<div class="col-10">
-<div class="form-group">
-    <input  type="text" name="name" placeholder="serach customer by name" class="form-control" id="exampleInputPassword1">
-  </div>
-  </div>
-  <div class="col">
-  <button type="submit" class="btn btn-primary">search</button>
-  </div>
-  </div>
+<div class="container">
+<h4 class="bg-info text-light">CRM - Customer Relationship Management</h4>
+<div id="formField">
+<form action="search" method="get" autocomplete="off">
+<table>
+<tr>
+<td>
+ Search Customer : <input  type="text" name="name" id="exampleInputPassword1">
+  </td>
+  <td>
+  <button type="submit" class="btn btn-info searchbtn">Search</button>
+  </td>
+ </tr>
+ </table>
 </form>
+</div>
 <br>
 <div class="table-responsive text-center">
-<table class="table table-hover table-striped table-bordered">
+<table class="table table-hover table-striped" id="tableborder">
 <thead class="thead-dark">
 				<tr>
 					<th>First Name</th>
@@ -56,7 +68,7 @@
 						
 			</table>
 			</div>
-			<input type="button" value="Add new customer" class="btn btn-primary" onclick="window.location.href='addCustomer'; return false;"/>
+			<input type="button" value="Add customer" class="btn btn-info searchbtn" onclick="window.location.href='addCustomer'; return false;"/>
  </div>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

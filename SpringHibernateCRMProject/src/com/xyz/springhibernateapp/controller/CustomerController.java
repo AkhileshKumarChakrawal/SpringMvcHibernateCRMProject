@@ -53,7 +53,7 @@ public class CustomerController {
 		
 		Customer customer = customerService.updateCustomerById(id);
 		model.addAttribute("customer",customer);
-		return "customer-form";
+		return "update-customer";
 	}
 	
 	@GetMapping("/delete")
